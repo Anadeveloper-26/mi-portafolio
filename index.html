@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional</title>
+    <link rel="icon" href="favicon.ico" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        darkMode: 'class'
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #fce4ec;
+            --secondary: #f8bbd0;
+            --accent: #f06292;
+            --dark: #880e4f;
+            --light: #ffffff;
+            --text: #333333;
+            --text-light: #666666;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--text);
+            background-color: white;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+        
+        .dark body {
+        background-color: var(--dark);
+        color: var(--light);
+        }
+
+        
+        .project-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(206, 143, 190, 0.918);
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(90deg, #f06292, #f48fb1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        #hero {
+            min-height: calc(100vh - 80px);
+        }
+    </style>
+</head>
+<body class="dark:bg-gray-900">
+    <!-- Barra de navegación -->
+<nav class="fixed w-full bg-pink-100 dark:bg-pink-900 shadow-sm z-50 transition-all duration-300">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-800 dark:text-white">Portafolio</a>
+            <div class="flex items-center space-x-1">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-300"></i>
+                </button>
+                <a href="#contact" class="px-4 py-2 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition-colors">
+                    Contacto
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Sección Hero -->
+    <section id="hero" class="flex items-center justify-center pt-20">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="ana1.jpg" alt="Retrato profesional del autor con fondo neutro, sonriendo ligeramente" class="rounded-lg shadow-xl w-full max-w-md mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 dark:text-white">
+                        Hola, soy <span class="text-gradient">Analy Hernández</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-gray-600 dark:text-gray-300">
+                        Desarrolladora Web Junior
+                    </h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                        Creo experiencias digitales hermosas y funcionales con código limpio y diseño cuidadoso. Especializado en desarrollo web moderno y aplicaciones escalables.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#projects" class="px-6 py-3 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition-colors">
+                            Ver proyectos
+                        </a>
+                        <a href="#contact" class="px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="projects" class="section bg-pink-100 dark:bg-pink-100"></section>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-black dark:text-white">Mis Proyectos</h2>
+                <p class="text-black dark:text-gray-300">
+                    Una selección de mis trabajos recientes. Cada proyecto es una solución única a un desafío específico.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Proyecto 1 -->
+                <div class="project-card rounded-lg overflow-hidden bg-white dark:bg-gray-700">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/570ab51e-4f76-4164-8243-13706ff22d39.png" alt="Captura de pantalla de una aplicación web tipo dashboard con gráficos y métricas empresariales" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Dashboard Analítico</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Plataforma de visualización de datos con gráficos interactivos y exportación de reportes.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-pink-200 dark:bg-[#880e4f] text-pink-900 dark:text-white text-xs rounded">React</span>
+                            <span class="px-2 py-1 bg-pink-200 dark:bg-[#880e4f] text-pink-900 dark:text-white text-xs rounded">SQL</span>
+                            <span class="px-2 py-1 bg-pink-200 dark:bg-[#880e4f] text-pink-900 dark:text-white text-xs rounded">Python</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-pink-700 hover:text-pink-900 dark:text-[#880e4f] dark:hover:text-pink-200">Ver demo</a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="project-card rounded-lg overflow-hidden bg-white dark:bg-gray-700">
+                    <div class="h-48 overflow-hidden">
+                        <img src="lulu.webp" alt="Interfaz de una tienda online mostrando productos de electrónica con filtros y carrito de compras" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Asistente de compras Lulu</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Gestión de productos, precios y cantidad. Realización de facturación final de las compras realizadas por cada cliente incluyendo IVA y descuentos disponibles del día.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-pink-200 dark:bg-[#880e4f] text-pink-900 dark:text-white text-xs rounded">Python</span>
+                            <span class="px-2 py-1 bg-pink-200 dark:bg-[#880e4f] text-pink-900 dark:text-white text-xs rounded">JavaScript</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-pink-700 hover:text-pink-900 dark:text-[#880e4f] dark:hover:text-pink-200">Ver demo</a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 -->
+                <div class="project-card rounded-lg overflow-hidden bg-white dark:bg-gray-700">
+                    <div class="h-48 overflow-hidden">
+                        <img src="escuela.jpg" alt="Aplicación móvil mostrando rutas de viaje con mapa interactivo y puntos de interés marcados" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Aplicaciones Web</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Aplicación para una Institucion Educativa, que organiza datos e información de personal administrativo, docente, obrero y estudiante.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-pink-200 dark:bg-[#880e4f] text-pink-900 dark:text-white text-xs rounded">HTML</span>
+                            <span class="px-2 py-1 bg-pink-200 dark:bg-[#880e4f] text-pink-900 dark:text-white text-xs rounded">CSS</span>
+                            <span class="px-2 py-1 bg-pink-200 dark:bg-[#880e4f] text-pink-900 dark:text-white text-xs rounded">JavaScript</span>
+                            <span class="px-2 py-1 bg-pink-200 dark:bg-[#880e4f] text-pink-900 dark:text-white text-xs rounded">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-pink-700 hover:text-pink-900 dark:text-[#880e4f] dark:hover:text-pink-200">Ver demo</a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section class="section">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="ana2.jpg" alt="Persona trabajando en un espacio de trabajo moderno con laptop y libretas" class="rounded-lg shadow-xl w-full max-w-md mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6 dark:text-white">Sobre mí</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Soy estudiante de Ingeniería Informática, creo soluciones digitales tanto en frontend como en backend. Apasionada por el aprendizaje constante y la evolución, cada día creando más experiencias de usuarios intuitivas y optimizadas.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Mi enfoque combina el rigor técnico con la sensibilidad estética, buscando siempre el equilibrio perfecto entre funcionalidad y diseño. Creo firmemente en el poder de la frase: <q>Si puedes imaginarlo puedes programarlo</q>.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-code text-[#880e4f]"></i>
+                            <span class="dark:text-white">Frontend</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-server text-[#880e4f]"></i>
+                            <span class="dark:text-white">Backend</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-mobile-alt text-[#880e4f]"></i>
+                            <span class="dark:text-white">Mobile</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-database text-[#880e4f]"></i>
+                            <span class="dark:text-white">Bases de datos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section id="skills" class="section bg-pink-50 dark:bg-[#880e4f]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-black dark:text-white">Mis Habilidades</h2>
+                <p class="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+                    Lenguajes y tecnologías que uso para crear soluciones digitales.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+                <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                    <img src="ht.png" alt="HTML Logo" class="h-15 w-15 mb-3"/>
+                    <span class="font-medium text-black">HTML</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                    <img src="cs.png" alt="CSS Logo" class="h-15 w-15 mb-3">
+                    <span class="font-medium text-black">CSS</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                    <img src="JAVASCRIPT.png" alt="JavaScript Logo" class="h-15 w-15 mb-3">
+                    <span class="font-medium text-black">JavaScript</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                    <img src="PYTHON.webp" alt="Python Logo" class="h-15 w-15 mb-3">
+                    <span class="font-medium text-black">Python</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                    <img src="VISUALBASIC.png" alt="Visual Basic Logo" class="h-15 w-15 mb-3">
+                    <span class="font-medium text-black">Visual Basic</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8a79d99a-475d-44ca-a33f-efc413ca5658.png" alt="React Logo" class="h-15 w-15 mb-3">
+                    <span class="font-medium text-black">React</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/17f4a607-9f14-4852-8756-83bd77408e79.png" alt="MongoDB Logo" class="h-15 w-15 mb-3">
+                    <span class="font-medium text-black">MongoDB</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                    <img src="HITHUB.jpg" alt="GitHub Logo" class="h-15 w-15 mb-3">
+                    <span class="font-medium text-black">GitHub</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                    <img src="FIGMA.png" alt="Figma Logo" class="h-15 w-15 mb-3">
+                    <span class="font-medium text-black">Figma</span>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ec42e1a5-2e21-4fc7-91a8-5c63c03daa62.png" alt="WordPress Logo" class="h-15 w-15 mb-3">
+                    <span class="font-medium text-black">WordPress</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="section bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 dark:text-white">Contacto</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    ¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte a hacerlo realidad.
+                </p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <form action="https://formsubmit.co/anadelosangeles.h26@gmail.com" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Nombre</label>
+                            <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Analy">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="nanita_22@gmail.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Asunto</label>
+                        <input type="text" id="subject" name="subject" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Negociación para el desarrollo de una aplicación web para mi empresa.">
+                    </div>
+                    <div>
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Deseo que la aplicación web tenga las siguientes características..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 px-6 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition-colors">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center">
+                <div class="flex space-x-6 mb-6">
+                    <a href="https://github.com/Anadeveloper-26" class="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400" target="_blank">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/584247173263" class="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400" target="_blank">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/analyhernandezc?igsh=YmRwNHxxeGsy" class="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400" target="_blank">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-500 dark:text-gray-400 text-center">
+                    © 2025 Analy Hernández. Mi Portafolio. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+        <script>
+        // Formulario de contacto
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Datos del formulario:', data);
+            
+            // Mostrar feedback al usuario
+            alert('Mensaje enviado con éxito. ¡Gracias por contactarme!');
+            contactForm.reset();
+        });
+        
+        // Smooth scrolling para los enlaces
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        </script>
+
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    // Aplicar tema guardado al cargar
+    if (localStorage.getItem('theme') === 'dark') {
+        htmlElement.classList.add('dark');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark');
+        if (htmlElement.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+        } else {
+        localStorage.setItem('theme', 'light');
+        }
+    });
+</script>
+</body>
+</html>
