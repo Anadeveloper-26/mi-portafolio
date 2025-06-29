@@ -296,6 +296,15 @@
             
             <div class="max-w-2xl mx-auto">
                 <form action="https://formsubmit.co/ana.hernan.cortez@gmail.com" method="POST" class="space-y-6">
+                    <!-- Evita el captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <!-- Mensaje en formato tabla (más legible) -->
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <!-- Título del email que recibirás -->
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Nombre</label>
